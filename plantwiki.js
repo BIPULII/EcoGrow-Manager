@@ -1,9 +1,10 @@
 const plants = [
     {
-      name: "Snake Plant",
-      image: "https://via.placeholder.com/300x200", // Replace with actual image URL
-      description: "A hardy, low-maintenance plant perfect for beginners.",
-      care: "Water once every 2 weeks; indirect sunlight.",
+      name: "Fiddle Leaf Plant",
+      image:  '/IMAGES2/Fiddle.jpg', // Replace with actual image URL
+      description: "The Fiddle Leaf Fig (Ficus lyrata) is a popular tropical plant known for its large, glossy, violin-shaped leaves. Native to West Africa, it is admired for its bold foliage and is commonly used as an indoor decorative plant in homes and offices. Its vibrant green leaves and impressive height make it a statement plant in any space.",
+      care: "Fiddle Leaf Figs thrive in bright, indirect light, but can tolerate some direct sunlight. They prefer a warm environment with temperatures ranging from 60°F to 75°F (15°C to 24°C). It is important to keep the soil consistently moist but not waterlogged, allowing the top few inches to dry between waterings. Regularly dusting the leaves helps maintain their shine and health. Additionally, the Fiddle Leaf Fig benefits from occasional pruning to maintain its shape and promote new growth.",
+      
     },
     {
       name: "Monstera Deliciosa",
