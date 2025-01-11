@@ -27,6 +27,57 @@ document.addEventListener('DOMContentLoaded', () => {
             price: 19,
             image: '/IMAGES2/Jadeplant.jpg'
         },
+        {
+            id: 4,
+            title: 'Peace Lily',
+            description: 'A well-grown peace lily may bloom twice a year.',
+            price: 25,
+            image: '/IMAGES2/PeaceLily.jpeg'
+            //
+        },
+        {
+            id: 5,
+            title: 'Spider plant',
+            description: ' very easy to grow indoors in medium to bright light throughout the year.',
+            price: 9,
+            image: '/IMAGES2/SpiderPlant.jpeg'
+        },
+        {
+            id: 6,
+            title: 'Pothos plant',
+            description: '  an evergreen plant with thick, waxy, green, heart-shaped leaves with splashes of yellow.',
+            price: 10,
+            image: '/IMAGES2/Pathos.jpeg'
+        },
+        
+        {
+            id: 7,
+            title: 'Rubber plant',
+            description: ' very easy to grow indoors in medium to bright light throughout the year.',
+            price: 11,
+            image: '/IMAGES2/RubberPlant.jpeg'
+        },
+        {
+            id: 8,
+            title: 'ZZ Plant',
+            description: 'This tropical plant, with its upright growth, and shiny, oval-shaped, deep green leaves.',
+            price: 10,
+            image: '/IMAGES2/ZZPlant.jpeg'
+        },
+        {
+            id: 9,
+            title: 'Chinese Evergreen',
+            description: '  an evergreen plant with thick, waxy, green, heart-shaped leaves with splashes of yellow.',
+            price: 21,
+            image: '/IMAGES2/ChineseEvergreen.jpeg'
+        },
+        {
+            id: 10,
+            title: 'Monstera',
+            description: 'grows best in humid and warm environments, requiring dappled or partial ligh',
+            price: 30,
+            image: '/IMAGES2/Monstera.jpeg'
+        },
         // Add more plants as needed
     ];
 
@@ -39,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${plant.image}" alt="${plant.title}">
                 <h3>${plant.title}</h3>
                 <p>${plant.description}</p>
-                <p>Price: $${plant.price.toFixed(2)}</p>
+                <p>Price: LKR.${plant.price.toFixed(2)}</p>
                 <input type="number" min="1" value="1" id="quantity-${plant.id}">
                 <button onclick="addToCart(${plant.id})">Add to Cart</button>
             `;
@@ -53,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const quantity = parseInt(quantityInput.value);
         const total = plant.price * quantity;
         const listItem = document.createElement('li');
-        listItem.textContent = `${plant.title} - $${total.toFixed(2)} (${quantity} pcs)`;
+        listItem.textContent = `${plant.title} - LKR.${total.toFixed(2)} (${quantity} pcs)`;
         cartItems.appendChild(listItem);
         const currentTotal = parseFloat(totalPrice.textContent);
         totalPrice.textContent = (currentTotal + total).toFixed(2);
