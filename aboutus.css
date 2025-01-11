@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #9ccc65;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #2a2a2a;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .navbar .logo {
+    color: #7cb342;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+  }
+  
+  .navbar ul li a {
+    color: #d4d4d4;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .navbar ul li a:hover {
+    color: #7cb342;
+  }
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 20px;
+  }
+  
+  /* Image Section */
+  .image-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    filter: brightness(0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Content Section */
+  .content-section {
+    flex: 2;
+    padding: 20px;
+    background-color: #263238;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .content-section h1 {
+    color: #7cb342;
+    margin-bottom: 20px;
+  }
+  
+  .content-section p {
+    line-height: 1.6;
+  }
+  
+  .content-section strong {
+    color: #7cb342;
+  }
+  

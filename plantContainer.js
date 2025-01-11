@@ -116,9 +116,34 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPlants(filteredPlants);
     });
 
+    // checkoutButton.addEventListener('click', () => {
+    //     alert('Checkout functionality is not implemented yet.');
+    // });
     checkoutButton.addEventListener('click', () => {
-        alert('Checkout functionality is not implemented yet.');
+        // Get all items in the cart
+        const cartItemsList = Array.from(cartItems.children);
+        if (cartItemsList.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+    
+        // Create a summary of the order
+        const orderSummary = cartItemsList.map(item => item.textContent).join('\n');
+        const totalCost = totalPrice.textContent;
+    
+        // Show the order summary and confirmation
+        const confirmation = confirm(
+            `Order Summary:\n${orderSummary}\n\nTotal Price: LKR.${totalCost}\n\nDo you want to confirm the order?`
+        );
+    
+        if (confirmation) {
+            // Clear the cart and reset UI
+            cartItems.innerHTML = '';
+            totalPrice.textContent = '0.00';
+            alert('Your order has been placed successfully!');
+        }
     });
+    
 
     renderPlants(plants);
 });

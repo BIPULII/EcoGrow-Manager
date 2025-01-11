@@ -59,6 +59,18 @@ body {
     width: auto; /* Maintain aspect ratio */
 }
 
+/* .container .btn :hover {
+    background-color: #6aa336;
+    
+    transition-property: transform;
+    transition-duration: 0.3s ;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.container .btn:hover {
+    background-color: #6aa336;
+    transform: translateY(-10px);
+} */
 
 /* Hero Section */
 /* .hero {
@@ -127,6 +139,7 @@ body {
 
 .hero .btn:hover {
     background-color: #6aa336;
+    /* transform: translateY(-100px); */
 }
 
 /* Features Section */
@@ -201,10 +214,16 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+
+    transition-property: transform;
+    transition-duration: 0.3s ;
+    transition-timing-function: ease;
+    transition-delay: 0s;
 }
 
 .inventory-preview .btn:hover {
     background-color: #6aa336;
+    transform: translateY(-10px);
 }
 
 /* Contact Section */
