@@ -183,7 +183,8 @@ body {
 /* Contact Section */
 .contact {
     padding: 3em 0;
-    background-color: #1e1e1e;
+    background-color: #1e1e1e
+    ;
 }
 
 .contact .section-title {

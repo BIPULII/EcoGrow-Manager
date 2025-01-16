@@ -19,11 +19,9 @@
             <li><a href="aboutus.html">About Us</a></li>
             <li><a href="plantwiki.html">Plant WIKI</a></li>
             <li><a href="inventory.html">Inventory Management</a></li>
-            
           </ul>
         </nav>
       </div>
-      
     </header>
     <!-- <header class="header">
       <h1>🌿 Plant Wiki</h1>
@@ -34,6 +32,14 @@
       </section>
       <section id="plant-list" class="plant-list">
         <!-- Plant cards will be dynamically added here -->
+         <!-- update -->
+        <div class="plant-card">
+          <img src="${plant.image}" alt="${plant.name}">
+          <h2>${plant.name}</h2>
+          <p>${plant.description}</p>
+          <p><strong>Care:</strong> ${plant.care}</p>
+        </div>
+        <!-- update end -->
       </section>
     </main>
     <footer>
