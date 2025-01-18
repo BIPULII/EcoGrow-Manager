@@ -28,24 +28,25 @@ const plants = [
     {
       name: "Spider plant",
       image: '/IMAGES2/SpiderPlant.jpeg',    
-      description:"",
-      care: "",
+      description:"The Spider Plant (Chlorophytum comosum) is a hardy and adaptable houseplant known for its arching, grass-like green leaves, often accented with white or cream stripes, depending on the variety. Native to South Africa, it is beloved for its cascading habit, as mature plants produce long stems with small, star-shaped flowers and offshoots called spiderettes, which resemble baby plants. These spiderettes give the plant its name and make it easy to propagate. A favorite among plant enthusiasts, the Spider Plant is celebrated for its aesthetic appeal, low maintenance, and air-purifying qualities, removing pollutants like carbon monoxide and formaldehyde from indoor environments.",
+
+      care: "Spider Plants thrive in a wide range of conditions, making them perfect for beginners or those with busy schedules. They prefer bright, indirect light but can tolerate lower light levels, although growth may slow. Keep the soil evenly moist, allowing the top inch to dry out between waterings, and reduce watering in winter. The plant is adaptable to different humidity levels and grows well in temperatures between 65–75°F (18–24°C). Use well-draining potting soil and fertilize lightly during the growing season. Brown tips on leaves may appear due to fluoride or chlorine in tap water, so distilled or filtered water is ideal. Non-toxic and pet-friendly, the Spider Plant is an excellent choice for creating a lush, vibrant indoor space.",
   },
     {
       name: "Pothos plant",
-      image: '/IMAGES2/sanke.jpg',    
+      image: '/IMAGES2/Pothos.jpeg',    
       description:"",
       care: "",
     },
     {
       name: "Rubber plant",
-      image: '/IMAGES2/sanke.jpg',    
+      image: '/IMAGES2/RubberPlant.jpeg',    
       description:"",
       care: "",
     },
     {
       name: "ZZ Plant",
-      image: '/IMAGES2/sanke.jpg',    
+      image: '/IMAGES2/ZZPlant.jpg',    
       description:"",
       care: "",
     },

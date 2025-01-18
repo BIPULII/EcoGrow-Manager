@@ -26,19 +26,16 @@ body {
 .navbar .logo {
     color: #7cb342;
     font-size: 1.5em;
-    font-weight: bold ;
-    /* background-image : url('/IMAGES2/logo.png');
-    background-size: 100px 100px; */
+    font-weight: bold;
 }
 
 .navbar ul {
     list-style: none;
     padding: 0;
     display: flex;
-    align-items: center; /* Align items vertically */
+    align-items: left;
     gap: 1.5em;
 }
-
 
 .navbar ul li a {
     color: #d4d4d4;
@@ -49,21 +46,11 @@ body {
 .navbar ul li a:hover {
     color: #7cb342;
 }
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between the logo image and the text */
-}
-
-.logo-img {
-    height: 50px; /* Adjust the height as needed */
-    width: auto; /* Maintain aspect ratio */
-}
 
 header {
     background-color: #263238;
     padding: 1em;
-    text-align: center;
+    text-align: left;
 }
 
 header h1 {
@@ -104,12 +91,22 @@ main {
 }
 
 .plant-card img {
-    width: 100%; height: 150px; /* Set a fixed height */ 
-    object-fit: cover; /* Maintain aspect ratio and cover the container */ 
-    border-bottom: 1px solid #7cb342; 
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #7cb342;
     margin-bottom: 1em;
 }
-
+.plant-card {
+    flex: 1;
+    padding: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Add transition property */
+  }
+  
+  .plant-card:hover {
+    transform: scale(1.1); /* Zooms in on hover */
+    filter: brightness(100%); /* Makes the image brighter */
+  }
 #cart {
     position: fixed;
     top: 15%;

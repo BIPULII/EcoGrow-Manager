@@ -57,11 +57,22 @@ body {
   }
   
   /* Image Section */
-  .image-section {
+  /* .image-section {
     flex: 1;
     padding: 20px;
-  }
+  } */
   
+.image-section {
+  flex: 1;
+  padding: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Add transition property */
+}
+
+.image-section:hover {
+  transform: scale(1.1); /* Zooms in on hover */
+  filter: brightness(120%); /* Makes the image brighter */
+}
+
   .image-section img {
     width: 100%;
     height: auto;
