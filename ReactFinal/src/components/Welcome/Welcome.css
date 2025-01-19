@@ -185,7 +185,7 @@ body {
 /* Footer */
 footer {
     background-color: #2a2a2a;
-    background-image: url('/src/assets/background3.png');
+    /* background-image: url('/src/assets/background3.png'); */
    
     padding: 1em 0;
     text-align: center;

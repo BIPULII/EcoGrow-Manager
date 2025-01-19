@@ -31,7 +31,7 @@ const plants = [
     image: "/src/assets/Container/PeaceLily.jpeg",
   },
   { id: 5, title: 'Spider plant', description: 'Very easy to grow indoors in medium to bright light.', price: 9, image: '/src/assets/Container/SpiderPlant.jpeg' },
-  { id: 6, title: 'Pothos plant', description: 'An evergreen plant with heart-shaped leaves with splashes of yellow.', price: 10, image: '/src/assets/Container/Pathos.jpeg' },
+  { id: 6, title: 'Pothos plant', description: 'An evergreen plant with heart-shaped leaves with splashes of yellow.', price: 10, image: '/src/assets/Container/Pothos.jpeg' },
   { id: 7, title: 'Rubber plant', description: 'Very easy to grow indoors in medium to bright light.', price: 11, image: '/src/assets/Container/RubberPlant.jpeg' },
   { id: 8, title: 'ZZ Plant', description: 'Shiny, oval-shaped, deep green leaves.', price: 10, image: '/src/assets/Container/ZZPlant.jpeg' },
   { id: 9, title: 'Chinese Evergreen', description: 'Thick, waxy, green leaves with splashes of yellow.', price: 21, image: '/src/assets/Container/ChineseEvergreen.jpeg' },
