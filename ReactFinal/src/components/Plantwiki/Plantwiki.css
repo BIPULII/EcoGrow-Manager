@@ -1,0 +1,153 @@
+/* General Reset */
+body, h1, p, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #7cb342;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 1rem;
+    background-color: #263238;
+    color: #7cb342;
+    border-bottom: 2px solid #7cb342;
+  }
+  
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2a2a2a;
+  padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo {
+  color: #7cb342;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.5em;
+}
+
+.navbar ul li a {
+  color: #d4d4d4;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #7cb342;
+}
+  
+  /* Search Section */
+  .search-section {
+    text-align: center;
+    margin: 1.5rem;
+  }
+  
+  #search {
+    padding: 0.5rem;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #7cb342;
+    font-size: 1rem;
+  }
+  
+  #search::placeholder {
+    color: #7cb342;
+  }
+  
+  /* Plant List */
+  /* update */
+  .plant-card img {
+    width: 300px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Ensures the image scales without distortion */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    display: block;
+    margin: 0 auto 10px; /* Centers the image and adds spacing */
+  }
+  
+  .plant-card {
+    border: 1px solid #ddd; /* Optional: adds a border around the card */
+    padding: 15px; /* Adds padding inside the card */
+    margin: 10px; /* Adds spacing between cards */
+    border-radius: 8px; /* Adds rounded corners to the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow for better aesthetics */
+    text-align: center; /* Centers the text content */
+    max-width: 320px; /* Optional: sets a max width for each card */
+  }
+  
+  .plant-list {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Wrap cards to the next row when necessary */
+    gap: 15px; /* Adds spacing between cards */
+    justify-content: center; /* Centers the cards in the container */
+  }
+  
+  /* update end */
+  /* .plant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .plant-card {
+    background-color: #263238;
+    border: 1px solid #7cb342;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    color: #7cb342;
+  }
+  
+  .plant-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .plant-card h2 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .plant-card p {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+   */
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #263238;
+    color: #7cb342;
+    border-top: 2px solid #7cb342;
+  }
+  
