@@ -6,16 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkoutButton = document.getElementById('checkoutButton');
 
     const plants = [
-        { id: 1, title: 'Fiddle Leaf Plant', description: 'A popular indoor plant with large, glossy leaves.', price: 20, image: '/IMAGES2/Fiddle.jpg' },
-        { id: 2, title: 'Snake Plant', description: 'An easy-care plant with tall, sturdy leaves.', price: 15, image: '/IMAGES2/sanke.jpg' },
-        { id: 3, title: 'Jade plant', description: 'An easy-care plant with tall, sturdy leaves.', price: 19, image: '/IMAGES2/Jadeplant.jpg' },
-        { id: 4, title: 'Peace Lily', description: 'A well-grown peace lily may bloom twice a year.', price: 25, image: '/IMAGES2/PeaceLily.jpeg' },
-        { id: 5, title: 'Spider plant', description: 'Very easy to grow indoors in medium to bright light.', price: 9, image: '/IMAGES2/SpiderPlant.jpeg' },
-        { id: 6, title: 'Pothos plant', description: 'An evergreen plant with heart-shaped leaves with splashes of yellow.', price: 10, image: '/IMAGES2/Pathos.jpeg' },
-        { id: 7, title: 'Rubber plant', description: 'Very easy to grow indoors in medium to bright light.', price: 11, image: '/IMAGES2/RubberPlant.jpeg' },
-        { id: 8, title: 'ZZ Plant', description: 'Shiny, oval-shaped, deep green leaves.', price: 10, image: '/IMAGES2/ZZPlant.jpeg' },
-        { id: 9, title: 'Chinese Evergreen', description: 'Thick, waxy, green leaves with splashes of yellow.', price: 21, image: '/IMAGES2/ChineseEvergreen.jpeg' },
-        { id: 10, title: 'Monstera', description: 'Grows best in humid and warm environments, requiring partial light.', price: 30, image: '/IMAGES2/Monstera.jpeg' }
+        { id: 1, title: 'Fiddle Leaf Plant', description: 'A popular indoor plant with large, glossy leaves.', price: 20, image: '/Project EcoGrow Manager/IMAGES2/Fiddle.jpg' },
+        { id: 2, title: 'Snake Plant', description: 'An easy-care plant with tall, sturdy leaves.', price: 15, image: '/Project EcoGrow Manager/IMAGES2/sanke.jpg' },
+        { id: 3, title: 'Jade plant', description: 'An easy-care plant with tall, sturdy leaves.', price: 19, image: '/Project EcoGrow Manager/IMAGES2/Jadeplant.jpg' },
+        { id: 4, title: 'Peace Lily', description: 'A well-grown peace lily may bloom twice a year.', price: 25, image: '/Project EcoGrow Manager/IMAGES2/PeaceLily.jpeg' },
+        { id: 5, title: 'Spider plant', description: 'Very easy to grow indoors in medium to bright light.', price: 9, image: '/Project EcoGrow Manager/IMAGES2/SpiderPlant.jpeg' },
+        { id: 6, title: 'Pothos plant', description: 'An evergreen plant with heart-shaped leaves with splashes of yellow.', price: 10, image: '/Project EcoGrow Manager/IMAGES2/Pathos.jpeg' },
+        { id: 7, title: 'Rubber plant', description: 'Very easy to grow indoors in medium to bright light.', price: 11, image: '/Project EcoGrow Manager/IMAGES2/RubberPlant.jpeg' },
+        { id: 8, title: 'ZZ Plant', description: 'Shiny, oval-shaped, deep green leaves.', price: 10, image: '/Project EcoGrow Manager/IMAGES2/ZZPlant.jpeg' },
+        { id: 9, title: 'Chinese Evergreen', description: 'Thick, waxy, green leaves with splashes of yellow.', price: 21, image: '/Project EcoGrow Manager/IMAGES2/ChineseEvergreen.jpeg' },
+        { id: 10, title: 'Monstera', description: 'Grows best in humid and warm environments, requiring partial light.', price: 30, image: '/Project EcoGrow Manager/IMAGES2/Monstera.jpeg' }
     ];
 
     function renderPlants(plants) {

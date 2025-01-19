@@ -61,7 +61,7 @@ body {
 .hero {
     text-align: center;
     padding: 5em 1em;
-    background-image: url('/IMAGES2/plant.png'); /* Path to your image */
+    background-image: url('/Project EcoGrow Manager/IMAGES2/plant.png'); /* Path to your image */
     background-size: cover; /* Ensures the image covers the entire section */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
