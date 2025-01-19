@@ -124,7 +124,7 @@ const PlantContainer = () => {
 
   return (
     <div>
-      <header className="navbar">
+      {/* <header className="navbar">
         <div className="container">
           <h1 className="logo">Plant Inventory</h1>
           <nav>
@@ -140,7 +140,7 @@ const PlantContainer = () => {
             </ul>
           </nav>
         </div>
-      </header>
+      </header> */}
 
       <header>
         <input

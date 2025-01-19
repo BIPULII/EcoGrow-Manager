@@ -6,7 +6,7 @@ const Welcome = () => {
   return (
     <div>
       {/* Navbar */}
-      <header className="navbar">
+      {/* <header className="navbar">
         <div className="container">
           <div className="logo">
             <span>Plant Inventory</span>
@@ -26,7 +26,7 @@ const Welcome = () => {
             </ul>
           </nav>
         </div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section id="home" className="hero">

@@ -4,7 +4,7 @@ import "./AboutUs.css";
 const AboutUs = () => {
   return (
     <div className="container">
-      <header className="navbar">
+      {/* <header className="navbar">
         <div className="container">
           <h1 className="logo">Plant Inventory</h1>
           <nav>
@@ -18,7 +18,7 @@ const AboutUs = () => {
             </ul>
           </nav>
         </div>
-      </header>
+      </header> */}
       <div className="about-section">
         <div className="image-section">
           <img
@@ -48,21 +48,9 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-      {/* <!-- Contact Section --> */}
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <p>Have questions or suggestions? We'd love to hear from you.</p>
-        <a href="mailto:support@plantinventory.com" class="btn">Contact Us</a>
-      </div>
-    </section>
+      
 
-    {/* <!-- Footer --> */}
-    <footer>
-      <div class="container">
-        <p>&copy; 2024 Plant Inventory. All Rights Reserved.</p>
-      </div>
-    </footer>
+   
     </div>
   );
 };

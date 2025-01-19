@@ -6,15 +6,15 @@ const plants = [
     name: "Fiddle Leaf Plant",
     image: "/src/assets/Container/Fiddle.jpg",
     description:
-      "The Fiddle Leaf Fig (Ficus lyrata) is a popular tropical plant known for its large, glossy, violin-shaped leaves...",
-    care: "Fiddle Leaf Figs thrive in bright, indirect light, but can tolerate some direct sunlight...",
+      "The Fiddle Leaf Fig (Ficus lyrata) is a striking houseplant renowned for its large, violin-shaped leaves and upright growth habit, making it a dramatic focal point in any indoor space. Native to the tropical rainforests of West Africa, this plant can grow into an impressive tree-like form when given proper care and space. Its bold foliage and modern aesthetic have made it a favorite among interior designers and plant enthusiasts alike. With its ability to elevate the look of any room, the Fiddle Leaf Fig is a true statement plant.",
+    care: "Caring for a Fiddle Leaf Fig requires attention to its specific needs, as it thrives in bright, indirect light but can tolerate some direct morning sunlight. It prefers consistently moist but well-drained soil, so water when the top 2-3 inches of soil feel dry. Avoid overwatering, as the plant is sensitive to root rot. Fiddle Leaf Figs appreciate stable environments with moderate humidity, away from drafts or sudden temperature changes. Fertilize during the growing season (spring and summer) with a balanced fertilizer to support healthy growth. Clean the leaves regularly with a damp cloth to keep them dust-free and shiny, ensuring the plant remains vibrant and healthy.",
   },
   {
     name: "Snake Plant",
     image: "/src/assets/Container/snake.jpg",
     description:
-      "The Snake Plant (Sansevieria trifasciata), commonly called Mother-in-Law's Tongue, is a striking, low-maintenance houseplant...",
-    care: "Caring for a snake plant is simple, making it an ideal choice for beginners...",
+      "The Snake Plant (Sansevieria trifasciata), also known as Mother-in-Law’s Tongue, is a hardy and low-maintenance houseplant recognized for its tall, sword-shaped leaves with striking green and yellow variegation. Native to tropical West Africa, this plant is a favorite among indoor gardeners due to its ability to thrive in a variety of conditions. It is also an excellent air purifier, removing toxins and improving indoor air quality, which makes it both a functional and stylish addition to any space.",
+    care: "Snake Plants are incredibly easy to care for, making them perfect for beginners. They thrive in bright, indirect sunlight but can tolerate low-light conditions. These plants are drought-tolerant and require infrequent watering—water only when the soil is completely dry, typically every 2-4 weeks, depending on the environment. Snake Plants prefer well-draining soil and pots with good drainage to prevent root rot. Fertilize sparingly, about once during the growing season, with a general-purpose houseplant fertilizer. With its adaptability and resilience, the Snake Plant is one of the most forgiving houseplants, requiring minimal effort to maintain its beauty and health.",
   },
   {
     name: "Jade Plant",
@@ -49,19 +49,19 @@ const plants = [
   },
   {
     name: "ZZ Plant",
-    image: '/src/assets/Container/ZZPlant.jpg',    
+    image: '/src/assets/Container/ZZPlant.jpeg',    
     description:"The ZZ Plant (Zamioculcas zamiifolia) is a hardy and stylish houseplant known for its glossy, dark green leaves and upright, architectural growth. Native to East Africa, the ZZ Plant is a favorite among indoor plant enthusiasts due to its ability to thrive in low-light environments and tolerate neglect. Its thick, waxy leaves and underground rhizomes store water, making it highly drought-resistant. The ZZ Plant is perfect for beginners and busy individuals who want a low-maintenance plant that adds a touch of elegance to any room.",
     care: "Caring for a ZZ Plant is simple, as it requires minimal attention. It thrives in low to bright indirect light, although it can tolerate low-light conditions for extended periods. Water the plant only when the soil is completely dry, as overwatering can lead to root rot. The ZZ Plant prefers well-draining potting soil and does not require frequent fertilization—feeding it once every few months during the growing season is sufficient. Dusting the leaves occasionally keeps them clean and enhances the plant's natural shine. With its resilience and ease of care, the ZZ Plant is an excellent choice for homes, offices, and even areas with less natural light.",
   },
   {
     name: "Chinese Evergreen",
-    image: '/src/assets/Container/ChineseEvergreen.jpg',    
+    image: '/src/assets/Container/ChineseEvergreen.jpeg',    
     description:"The Chinese Evergreen (Aglaonema) is a versatile and visually appealing houseplant known for its lush foliage, which comes in a variety of colors and patterns, including green, silver, pink, and red. Native to tropical and subtropical regions of Asia and New Guinea, this plant is highly regarded for its ability to thrive in a wide range of indoor conditions. The Chinese Evergreen’s compact size and vibrant leaves make it a favorite choice for decorating desks, shelves, or corners with limited natural light.",
     care: "The Chinese Evergreen is exceptionally easy to care for, making it ideal for both novice and experienced plant enthusiasts. It thrives in low to medium indirect light, although variegated varieties may benefit from brighter conditions to maintain their vibrant patterns. Water the plant when the top inch of soil feels dry, and ensure the pot has good drainage to prevent overwatering. The plant prefers warm, humid environments but can adapt to standard indoor humidity levels. Fertilize monthly during the growing season with a balanced houseplant fertilizer to promote healthy growth. Regularly wiping the leaves helps maintain their shine and prevents dust buildup, ensuring the Chinese Evergreen remains a vibrant addition to any space.",
   },
   {
     name: "Monstera",
-    image: '/src/assets/Container/Monstera.jpg',    
+    image: '/src/assets/Container/Monstera.jpeg',    
     description:"The Monstera plant (Monstera deliciosa), commonly known as the Swiss Cheese Plant, is a popular tropical houseplant prized for its large, glossy, and uniquely fenestrated leaves. Native to the rainforests of Central and South America, this striking plant adds an exotic and vibrant touch to indoor spaces. Its characteristic holes and splits in the leaves allow it to thrive in its natural environment by letting light pass through to the lower foliage. Monstera plants can grow as climbing vines, making them a perfect choice for trellises or moss poles indoors.",
     care: "Monstera plants thrive in bright, indirect sunlight but can tolerate moderate light conditions. They prefer well-draining soil that retains some moisture, so water the plant when the top 2-3 inches of soil feel dry, ensuring not to overwater. Maintaining a humid environment mimics its tropical origins, and occasional misting can benefit its growth. Fertilize the Monstera monthly during the growing season (spring and summer) with a balanced houseplant fertilizer. As a climbing plant, it may need support, such as a moss pole, to encourage upward growth. Regular cleaning of the leaves helps maintain their glossy appearance and prevents dust accumulation, ensuring this stunning plant continues to thrive and impress.",
   },
@@ -83,13 +83,12 @@ const PlantWiki = () => {
 
   return (
     <div>
-      <header className="navbar">
+      {/* <header className="navbar">
         <div className="container">
           <h1 className="logo">Plant Inventory</h1>
           <nav>
             <ul>
               <li><a href="/">Home</a></li>
-              {/* <li><a href="/aboutus">About Us</a></li> */}
               <li><a href="plantwiki">Plant WIKI</a></li>
               <li><a href="Container">Plant Container</a></li>
               <li><a href="Inventry">Inventory</a></li>
@@ -97,7 +96,7 @@ const PlantWiki = () => {
             </ul>
           </nav>
         </div>
-      </header>
+      </header> */}
 
       <main>
         <section className="search-section">

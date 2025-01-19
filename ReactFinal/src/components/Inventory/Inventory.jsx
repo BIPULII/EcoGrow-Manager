@@ -1,10 +1,10 @@
 import React from "react";
-import "./Inventry.css";
+import "./Inventory.css";
 
 const Inventory = () => {
   return (
     <div>
-      <header className="navbar">
+      {/* <header className="navbar">
         <div className="container">
           <h1 className="logo">Plant Inventory Management</h1>
           <nav>
@@ -22,7 +22,7 @@ const Inventory = () => {
             </ul>
           </nav>
         </div>
-      </header>
+      </header> */}
 
       {/* Inventory Section */}
       <section id="inventory" className="inventory-section">
