@@ -6,6 +6,8 @@ import Inventory from "./components/Inventory/Inventory";
 import PlantWiki from "./components/Plantwiki/Plantwiki";
 import Container from "./components/Container/Container";
 import Navbar from "./components/Navbar/Navbar";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register"
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/inventory" element={<Inventory/>}/>
         <Route path="/plantwiki" element={<PlantWiki/>}/>
         <Route path="/container" element={<Container/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
       </Routes>
     </div>
   );

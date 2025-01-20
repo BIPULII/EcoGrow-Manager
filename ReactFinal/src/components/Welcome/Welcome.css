@@ -104,12 +104,25 @@ body {
     font-size: 1em;
     color: #b0b0b0;
 }
+.feature-card:hover {
+    transform: scale(1.1);
+    filter: brightness(120%);
+  }
 
 /* Inventory Preview Section */
 .inventory-preview {
     padding: 3em 0;
     background-color: #263238;
+    background-image: url('/src/assets/plantcut2.png');
+    background-size: cover;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    object-position: center; /* Focuses on the center of the image */
+    transition: transform 0.5s ease, filter 0.5s ease; /* Adds smooth animation effects */
+
 }
+.inventory-preview:hover {
+    transform: scale(1.2); /* Zooms in when hovered */
+  filter: brightness(120%);}
 
 .inventory-preview .section-title {
     text-align: center;

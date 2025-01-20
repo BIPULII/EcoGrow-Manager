@@ -22,7 +22,7 @@ const AboutUs = () => {
       <div className="about-section">
         <div className="image-section">
           <img
-            src="/src/assets/aboutus.png"
+            src="/src/assets/logo.png"
             alt="Plants in the dark theme"
           />
         </div>

@@ -29,8 +29,14 @@ const Navbar = () => {
 
       {/* Right Side: Profile */}
       <div className="navbar-right">
-        <Link to="/profile" className="profile-link">
+        {/* <Link to="/profile" className="profile-link">
           Profile
+        </Link> */}
+        <Link to="/register" className="profile-link">
+          Register
+        </Link>
+        <Link to="/login" className="profile-link">
+          Login
         </Link>
       </div>
     </div>

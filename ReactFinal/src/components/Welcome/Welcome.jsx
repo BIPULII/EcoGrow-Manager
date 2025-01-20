@@ -69,9 +69,10 @@ const Welcome = () => {
       {/* <!-- Inventory Preview Section --> */}
     <section id="inventory" class="inventory-preview">
       <div class="container">
-        <h2 class="section-title">Your Plant Inventory</h2>
-        <p>Easily add, update, or view your plant collection details.</p>
-        <a href="inventory.html" class="btn">Go to Inventory</a>
+        <h2 class="section-title">Your Shopping Cart</h2>
+        <p>Review, update, or proceed to checkout with the plants you've selected for purchase.</p>
+        <a href="Container" class="btn">Checkout</a>
+        
       </div>
     </section>
 
