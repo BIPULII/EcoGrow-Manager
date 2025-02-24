@@ -8,6 +8,7 @@ import Container from "./components/Container/Container";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register"
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
       </Routes>
+      {/* <Footer/> */}
     </div>
   );
 };

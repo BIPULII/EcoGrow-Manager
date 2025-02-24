@@ -1,0 +1,82 @@
+/* Footer Container */
+.footer {
+    position: relative;
+    background-color: #1e1e1e;
+    color: #7cb342;
+    text-align: center;
+    padding: 2em 0;
+    overflow: hidden; /* Ensures leaves stay within the footer area */
+  }
+  
+  /* Footer Text */
+  .footer-content p {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  /* Leaves Container */
+  .leaves-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures the leaves don't interfere with user interaction */
+  }
+  
+  /* Individual Leaf */
+  .leaf {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url('/assets/leaf.png')  no-repeat center center/contain;
+    animation: float 10s linear infinite;
+    opacity: 0.8;
+  }
+  
+  /* Generate Leaves at Random Positions */
+  .leaf:nth-child(1) {
+    left: 10%;
+    animation-duration: 12s;
+    animation-delay: 0s;
+  }
+  
+  .leaf:nth-child(2) {
+    left: 30%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+  }
+  
+  .leaf:nth-child(3) {
+    left: 50%;
+    animation-duration: 15s;
+    animation-delay: 4s;
+  }
+  
+  .leaf:nth-child(4) {
+    left: 70%;
+    animation-duration: 9s;
+    animation-delay: 1s;
+  }
+  
+  .leaf:nth-child(5) {
+    left: 90%;
+    animation-duration: 11s;
+    animation-delay: 3s;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes float {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100px) rotate(360deg);
+      opacity: 0.5;
+    }
+  }
+  
