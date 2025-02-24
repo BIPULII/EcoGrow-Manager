@@ -1,7 +1,28 @@
-import React from "react";
+//import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./Login.css";
 
 const Login = () => {
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5008/Login", formData);
+      if (response.data.success) {
+        // Redirect user to dashboard or home page after successful login
+        window.location.href = "/Welcome";
+      } else {
+        alert("Login failed. Please check your credentials.");
+      }
+    } catch (error) {
+      console.error("Error logging in:", error);
+      alert("Login failed");
+    }
+  };
   return (
     <div className="video-container">
       {/* Background Video */}

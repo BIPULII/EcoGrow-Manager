@@ -1,7 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./Register.css";
 
 const Registration = () => {
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+    email: ""
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5008/Users", formData);
+      alert(response.data);
+    } catch (error) {
+      console.error("Error registering user:", error);
+      alert("Registration failed");
+    }
+  };
+
   return (
     <div className="video-container">
       {/* Video Background */}
@@ -13,7 +39,7 @@ const Registration = () => {
       {/* Registration Form */}
       <div className="form-container">
         <h2>Create Your Account</h2>
-        <form action="/register" method="post">
+        <form onSubmit={handleSubmit}>
           <div className="form-field">
             <label className="form-label" htmlFor="username">
               Username:
@@ -24,6 +50,8 @@ const Registration = () => {
               id="username"
               name="username"
               placeholder="Enter your username"
+              value={formData.username}
+              onChange={handleChange}
               required
             />
           </div>
@@ -37,6 +65,8 @@ const Registration = () => {
               id="password"
               name="password"
               placeholder="Enter your password"
+              value={formData.password}
+              onChange={handleChange}
               required
             />
           </div>
@@ -50,6 +80,8 @@ const Registration = () => {
               id="email"
               name="email"
               placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
               required
             />
           </div>
