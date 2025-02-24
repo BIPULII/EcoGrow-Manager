@@ -1,6 +1,11 @@
  import express from 'express'; 
  import mysql from 'mysql';
+ import cors from 'cors';
+
  const app = express();
+
+  app.use(cors());
+  app.use(express.json());
  const dbConfig={
     host:'berkp48rwddywbgi77ez-mysql.services.clever-cloud.com',//replace with your MySQL host
     user:'uaw4in7o93fyhrpa', //replace with your MySQL user
