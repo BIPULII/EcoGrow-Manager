@@ -22,6 +22,7 @@ const Registration = () => {
     try {
       const response = await axios.post("http://localhost:5008/Users", formData);
       alert(response.data);
+      window.location.href = "/";
     } catch (error) {
       console.error("Error registering user:", error);
       alert("Registration failed");

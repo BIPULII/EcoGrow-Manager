@@ -11,10 +11,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5008/Login", formData);
+      const response = await axios.post("http://localhost:5008/Users", formData);
       if (response.data.success) {
         // Redirect user to dashboard or home page after successful login
-        window.location.href = "/Welcome";
+        window.location.href = "/";
       } else {
         alert("Login failed. Please check your credentials.");
       }
