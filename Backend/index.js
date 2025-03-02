@@ -27,10 +27,11 @@
   res.send('post');
 })
 //###########################
+// Login Endpoint: Validate credentials against the User table
 app.post('/Login', (req, res) => {
   const { username, password } = req.body;
-
   const query = 'SELECT * FROM User WHERE username = ?';
+  
   connection.query(query, [username], (err, results) => {
     if (err) {
       console.error('Error fetching user data: ', err.message);
@@ -43,7 +44,7 @@ app.post('/Login', (req, res) => {
 
     const user = results[0];
 
-    // Check password (if you're using bcrypt to hash passwords)
+    // Compare the provided password with the stored hashed password
     bcrypt.compare(password, user.password, (err, isMatch) => {
       if (err) {
         console.error('Error comparing passwords: ', err.message);
@@ -51,15 +52,49 @@ app.post('/Login', (req, res) => {
       }
 
       if (isMatch) {
-        // If login is successful, send a success response
+        // If credentials are correct, send a success response
         res.status(200).send({ success: true, message: 'Login successful' });
       } else {
-        // If password is incorrect
+        // If the password is incorrect, send an error response
         res.status(401).send({ success: false, message: 'Invalid credentials' });
       }
     });
   });
 });
+
+// app.post('/Login', (req, res) => {
+//   const { username, password } = req.body;
+
+//   const query = 'SELECT * FROM User WHERE username = ?';
+//   connection.query(query, [username], (err, results) => {
+//     if (err) {
+//       console.error('Error fetching user data: ', err.message);
+//       return res.status(500).send('Server error');
+//     }
+
+//     if (results.length === 0) {
+//       return res.status(404).send({ success: false, message: 'User not found' });
+//     }
+
+//     const user = results[0];
+
+//     // Check password (if you're using bcrypt to hash passwords)
+//     bcrypt.compare(password, user.password, (err, isMatch) => {
+//       if (err) {
+//         console.error('Error comparing passwords: ', err.message);
+//         return res.status(500).send('Server error');
+//       }
+
+//       if (isMatch) {
+//         // If login is successful, send a success response
+//         res.status(200).send({ success: true, message: 'Login successful' });
+//       } else {
+//         // If password is incorrect
+//         res.status(401).send({ success: false, message: 'Invalid credentials' });
+//       }
+//     });
+//   });
+// });
 //###########################
 app.get('/Plants',(req,res)=>{
   const query = 'SELECT * FROM Plants';

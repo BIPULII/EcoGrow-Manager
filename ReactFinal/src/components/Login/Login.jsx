@@ -1,5 +1,6 @@
 //import React from "react";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";//
 import axios from "axios";
 import "./Login.css";
 
@@ -8,6 +9,8 @@ const Login = () => {
     username: "",
     password: "",
   });
+
+  const navigate = useNavigate();//
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -15,6 +18,7 @@ const Login = () => {
       if (response.data.success) {
         // Redirect user to dashboard or home page after successful login
         window.location.href = "/";
+        navigate("/welcome");
       } else {
         alert("Login failed. Please check your credentials.");
       }
