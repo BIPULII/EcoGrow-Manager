@@ -1,6 +1,5 @@
-//import React from "react";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";//
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
 
@@ -10,23 +9,33 @@ const Login = () => {
     password: "",
   });
 
-  const navigate = useNavigate();//
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post("http://localhost:5014/login", formData);
       if (response.data.success) {
-        // Redirect user to dashboard or home page after successful login
-        //  window.location.href = "/";
-        navigate("/Welcome");
+        // Store user data in localStorage
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('username', formData.username);
+        navigate("/");
       } else {
         alert("Login failed. Please check your credentials.");
       }
     } catch (error) {
       console.error("Error logging in:", error);
-      alert("Login failed");
+      alert(error.response?.data?.error || "Login failed");
     }
   };
+
   return (
     <div className="video-container">
       {/* Background Video */}
@@ -38,7 +47,7 @@ const Login = () => {
       {/* Login Form Overlay */}
       <div className="form-overlay">
         <h2>Login to Plant Inventory</h2>
-        <form action="/login" method="post">
+        <form onSubmit={handleSubmit}>
           <div className="form-field">
             <label className="form-label" htmlFor="username">
               Username
@@ -48,6 +57,8 @@ const Login = () => {
               type="text"
               id="username"
               name="username"
+              value={formData.username}
+              onChange={handleChange}
               placeholder="Enter your username"
               required
             />
@@ -62,6 +73,8 @@ const Login = () => {
               type="password"
               id="password"
               name="password"
+              value={formData.password}
+              onChange={handleChange}
               placeholder="Enter your password"
               required
             />

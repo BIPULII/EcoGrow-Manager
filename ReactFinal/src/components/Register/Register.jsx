@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Uncomment this line
 import axios from "axios";
 import "./Register.css";
 
@@ -8,7 +9,9 @@ const Registration = () => {
     password: "",
     email: ""
   });
-  //const navigate = useNavigate(); //  Define navigate
+
+  const navigate = useNavigate(); // Uncomment this line
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -17,38 +20,22 @@ const Registration = () => {
     });
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const response = await axios.post("http://localhost:5014/Register", formData);
-  //     alert(response.data);
-  //     // window.location.href = "/";
-  //     navigate("/Welcome");
-  //   } 
-  //   catch (error) {
-  //     console.error("Error registering user:", error);
-  //     alert("Registration failed");
-  //     //alert(error.response?.data || "Registration failed");
-  //   }
-  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5014/Register", formData);
-      if (response.status === 200) {
-        alert("Registration successfu");
-        navigate("/Welcome");
-        
+      const response = await axios.post("http://localhost:5014/register", formData);
+      if (response.status === 201) {
+        alert("Registration successful");
+        navigate("/");
       } else {
         alert("Registration failed");
       }
-      
-    } 
-    catch (error) {
+    } catch (error) {
       console.error("Error registering user:", error);
       alert("Registration failed");
     }
   };
+
   return (
     <div className="video-container">
       {/* Video Background */}
