@@ -7,21 +7,45 @@ const Welcome = () => {
   const [username, setUsername] = useState('');
   const navigate = useNavigate();
 
+  // useEffect(() => {
+  //   // Check authentication status when component mounts
+  //   const loggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  //   const storedUsername = localStorage.getItem('username');
+  //   setIsLoggedIn(loggedIn);
+  //   setUsername(storedUsername || '');
+  // }, []);
   useEffect(() => {
     // Check authentication status when component mounts
     const loggedIn = localStorage.getItem('isLoggedIn') === 'true';
     const storedUsername = localStorage.getItem('username');
+    
+    if (!loggedIn) {
+      navigate('/login');
+      return;
+    }
+    
     setIsLoggedIn(loggedIn);
     setUsername(storedUsername || '');
-  }, []);
+  }, [navigate]);
 
   const handleLogout = () => {
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('username');
-    setIsLoggedIn(false);
-    setUsername('');
-    navigate('/login');
+    // Show confirmation dialog
+    const confirmLogout = window.confirm("Are you sure you want to log out?");
+    
+    // Only proceed with logout if user confirms
+    if (confirmLogout) {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('username');
+      setIsLoggedIn(false);
+      setUsername('');
+      navigate('/login');
+    }
   };
+  // If not logged in, don't render anything
+  if (!isLoggedIn) {
+    return null;
+  }
+  //
   return (
     <div>
       {/* Add user status section */}
@@ -33,11 +57,14 @@ const Welcome = () => {
           </div>
         ) : (
           <div className="auth-buttons">
-            <Link to="/login" className="btn">Login</Link>
-            <Link to="/register" className="btn">Register</Link>
+            {/* <Link to="/login" className="btn">Login</Link>
+            <Link to="/register" className="btn">Register</Link> */}
+             {navigate('/login')}
           </div>
         )}
       </nav>
+      {isLoggedIn && (
+        <>
       {/* Hero Section */}
       <section id="home" className="hero">
         <div className="hero-content">
@@ -103,6 +130,8 @@ const Welcome = () => {
           <p>&copy; 2024 Plant Inventory. All Rights Reserved.</p>
         </div>
       </footer>
+      </>
+      )}
     </div>
   );
 };
